@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>For loop in Flask</title>
+    <style>
+        .img-with-text {
+            float: left;
+            margin-right: 1em;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+    {%for i in range(images|length)%}
+    <div class="img-with-text"><img src="{{url_for('static', filename=images[i])}}"  width="224" height="224">
+        <p>Hemorrhage probability: {{pred[i][0]}}</p>
+    </div>
+    {%endfor%}
+</div>
+
+</body>
+</html>
+
