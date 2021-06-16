@@ -1,0 +1,1 @@
+## In this folder the images are saved to later be used by the model to make the prediction

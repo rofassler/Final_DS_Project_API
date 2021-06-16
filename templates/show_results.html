@@ -9,17 +9,21 @@
             margin-right: 1em;
             text-align: center;
         }
-</style>
+    </style>
 </head>
 <body>
 
 <div class="container">
-    {%for i in range(images|length)%}
-    <div class="img-with-text"><img src="{{url_for('static', filename=images[i])}}"  width="224" height="224">
-        <p>Hemorrhage probability: {{pred[i][0]}}</p>
+    {% for i in range(images|length) %}
+    <div class="img-with-text"><img id="myImg" src="{{url_for('static', filename=images[i])}}"  width="224" height="224">
+            <p>Hemorrhage probability: {{pred[i]}}%</p>
     </div>
-    {%endfor%}
+    {% endfor %}
 </div>
+
+<script>
+
+</script>
 
 </body>
 </html>
